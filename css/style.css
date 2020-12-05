@@ -1,0 +1,32 @@
+.banner img {
+    opacity: 0.5;
+}
+
+.banner {
+    background-color: black;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+    .cover-heading {
+        font-size: 1.9rem;
+    }
+    .cover-subheading {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .cover-subheading {
+        display: none;
+    }
+}
