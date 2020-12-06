@@ -9,11 +9,38 @@
     color: white;
 }
 
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
 .centered_text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.photo_author{
+    font-size: 0.7rem;
+    color: white;
+}
+
+.photo_author:hover {
+    color: white;
+}
+
+.photo_author:visited {
+    color: white;
+}
+
+.form {
+    padding: 1.5rem;
+}
+
+.form_checkbox_header {
+    font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {

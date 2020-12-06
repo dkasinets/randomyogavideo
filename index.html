@@ -36,6 +36,9 @@
             
             <section class="banner">
                 <img src="./images/yoga_crop.jpeg" class="img-fluid" alt="Two women doing yoga">
+                <div class="bottom-right">
+                    <a class="photo_author btn btn-link" href="https://unsplash.com/@jibarofoto" target="_blank">@jibarofoto</a>
+                </div>
                 <div class="centered_text">
                     <h1 class="cover-heading">Little movements add up <i class="fa fa-heart" style="color:red"></i></h1>
                     <p class="lead cover-subheading">Looking for an excuse to exercise? I Gotchu.<br>Smash 'My random exercise video' button to find a YouTube video to follow along. It's good for you!</p>
@@ -50,9 +53,41 @@
                     <p class="mb-0">"When you try to move in synchrony with someone else, it also improves your self-esteem."<sup class="reference_shortcut"><a href="https://www.health.harvard.edu/blog/how-simply-moving-benefits-your-mental-health-201603289350" target="_blank">[2]</a></sup></p>
                     <footer class="blockquote-footer">Srini Pillay, MD, Author at <cite title="Source Title">Harvard Health Blog</cite></footer>
                 </blockquote>
-                <p class="lead">
-                    <button type="submit" class="btn btn-danger btn-lg">My random exercise video</button>
-                </p>
+                <form class="form">
+                    <div class="form-group">
+                        <label class="col-form-label form_checkbox_header" for="inputAddress">Type</label>
+                        <fieldset id="inputAddress" class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="inlineCheckbox1" type="radio" name="gridRadios" value="option1" checked>
+                                <label class="form-check-label" for="inlineCheckbox1">Yoga</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="inlineCheckbox2" type="radio" name="gridRadios" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Exercise</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label form_checkbox_header" for="inputAddress2">Length</label>
+                        <fieldset id="inputAddress2" class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="inlineCheckbox3" type="radio" name="gridRadios2" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">1 min</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="inlineCheckbox4" type="radio" name="gridRadios2" value="option4" checked>
+                                <label class="form-check-label" for="inlineCheckbox4">5 min</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="inlineCheckbox5" type="radio" name="gridRadios2" value="option5">
+                                <label class="form-check-label" for="inlineCheckbox5">10 min</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <p class="lead">
+                        <button type="submit" class="btn btn-danger btn-lg">My random exercise video</button>
+                    </p>
+                </form>
             </main>
             
             <footer class="mastfoot mt-auto">
