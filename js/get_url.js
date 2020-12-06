@@ -30,7 +30,7 @@ function get_video(myJson) {
 
 // https://www.youtube.com/watch?v=vWl5XcvQBx0
 function get_api_data(query_string) {
-    var endpoint = `http://exercise-video-returner.herokuapp.com/api-yt-links/?query=${query_string}`;
+    var endpoint = `https://exercise-video-returner.herokuapp.com/api-yt-links/?query=${query_string}`;
     
     console.log(endpoint)
 
