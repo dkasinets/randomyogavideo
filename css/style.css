@@ -2,6 +2,10 @@
     opacity: 0.5;
 }
 
+/* .banner img.celebration {
+    opacity: 1;
+} */
+
 .banner {
     background-color: black;
     position: relative;
@@ -40,7 +44,37 @@
 }
 
 .form_checkbox_header {
+    font-weight: bold;
+}
+
+.smash_button {
     font-weight: 500;
+}
+
+.loader_wrapper {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background-color: black;
+}
+
+.spinner_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.looking_text{
+    font-weight: 500;
+    z-index: 1000;
+    font-size: 1.4rem;
+    color: white;
+    vertical-align: top;
 }
 
 @media screen and (max-width: 768px) {

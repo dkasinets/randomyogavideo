@@ -5,7 +5,9 @@
         <!-- https://material.io/resources/icons/?search=dice&icon=casino&style=baseline -->
         <link rel="icon" href="./images/casino-black-18dp.svg">
         
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./css/style.css">
         
@@ -22,6 +24,7 @@
         <meta name="keywords" content="Random,Yoga,Video,YouTube,Health,Exercise,Generate">
         <meta name="author" content="Dzmitry Kasinets">
         <meta name="description" content="Little movements add up. This website will get you a random yoga or exercise video from YouTube.">
+        
     </head>
     <body class="text-center">
 
@@ -41,7 +44,7 @@
                 </div>
                 <div class="centered_text">
                     <h1 class="cover-heading">Little movements add up <i class="fa fa-heart" style="color:red"></i></h1>
-                    <p class="lead cover-subheading">Looking for an excuse to exercise? I Gotchu.<br>Smash 'My random exercise video' button to find a YouTube video to follow along. It's good for you!</p>
+                    <p class="lead cover-subheading">Looking for an excuse to exercise? Gotcha.<br>Smash <span class="smash_button">My random exercise video</span> button to find a YouTube video and follow along. It's good for you!</p>
                 </div>
             </section>
             <main role="main" class="jumbotron inner cover">
@@ -55,32 +58,32 @@
                 </blockquote>
                 <form class="form">
                     <div class="form-group">
-                        <label class="col-form-label form_checkbox_header" for="inputAddress">Type</label>
-                        <fieldset id="inputAddress" class="form-group">
+                        <label class="col-form-label form_checkbox_header" for="inputType">Type</label>
+                        <fieldset id="inputType" class="form-group">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="inlineCheckbox1" type="radio" name="gridRadios" value="option1" checked>
-                                <label class="form-check-label" for="inlineCheckbox1">Yoga</label>
+                                <input class="form-check-input" id="inlineCheckboxYoga" type="radio" name="type" value="yoga" checked>
+                                <label class="form-check-label" for="inlineCheckboxYoga">Yoga</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="inlineCheckbox2" type="radio" name="gridRadios" value="option2">
-                                <label class="form-check-label" for="inlineCheckbox2">Exercise</label>
+                                <input class="form-check-input" id="inlineCheckboxExercise" type="radio" name="type" value="exercise">
+                                <label class="form-check-label" for="inlineCheckboxExercise">Exercise</label>
                             </div>
                         </fieldset>
                     </div>
                     <div class="form-group">
-                        <label class="col-form-label form_checkbox_header" for="inputAddress2">Length</label>
-                        <fieldset id="inputAddress2" class="form-group">
+                        <label class="col-form-label form_checkbox_header" for="inputLength">Length</label>
+                        <fieldset id="inputLength" class="form-group">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="inlineCheckbox3" type="radio" name="gridRadios2" value="option3">
-                                <label class="form-check-label" for="inlineCheckbox3">1 min</label>
+                                <input class="form-check-input" id="inlineCheckboxOneMin" type="radio" name="length" value="1min">
+                                <label class="form-check-label" for="inlineCheckboxOneMin">1 min</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="inlineCheckbox4" type="radio" name="gridRadios2" value="option4" checked>
-                                <label class="form-check-label" for="inlineCheckbox4">5 min</label>
+                                <input class="form-check-input" id="inlineCheckboxFiveMin" type="radio" name="length" value="5min" checked>
+                                <label class="form-check-label" for="inlineCheckboxFiveMin">5 min</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="inlineCheckbox5" type="radio" name="gridRadios2" value="option5">
-                                <label class="form-check-label" for="inlineCheckbox5">10 min</label>
+                                <input class="form-check-input" id="inlineCheckboxTenMin" type="radio" name="length" value="10min">
+                                <label class="form-check-label" for="inlineCheckboxTenMin">10 min</label>
                             </div>
                         </fieldset>
                     </div>
@@ -95,11 +98,15 @@
                     <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
                 </div>
             </footer>
-            
+            <div class="boxLoading"></div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./js/get_url.js"></script>
     </body>
 </html>
