@@ -10,10 +10,10 @@ function create_query_string(fields) {
     return query_string
 }
 
-function get_video(myJson) {
-    console.log(myJson.urls);
+function get_video(url_id) {
+    console.log(url_id);
     $("main").html(`<div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 1.5rem;">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${myJson.urls[0]}?rel=0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${url_id}?rel=0" allowfullscreen></iframe>
                     </div>
                     <p class="lead">
                         <button type="button" class="btn btn-danger btn-lg" onclick="window.location.reload();">Try again</button>
@@ -30,6 +30,7 @@ function get_video(myJson) {
 
 // https://www.youtube.com/watch?v=vWl5XcvQBx0
 function get_api_data(query_string) {
+    // http://127.0.0.1:8000/api-yt-links/?query=
     var endpoint = `https://exercise-video-returner.herokuapp.com/api-yt-links/?query=${query_string}`;
     
     console.log(endpoint)
@@ -54,14 +55,18 @@ function get_api_data(query_string) {
     })
     .then(function(myJson) {
         console.log(myJson);
-        get_video(myJson);
+        var url_id = myJson.urls[0];
+        get_video(url_id);
 
         // hide loader
         $(".boxLoading").hide();
     })
     .catch((error) => {
         console.log(error)
-
+        // Error placeholder video OutKast - B.O.B
+        var url_id = "lVehcuJXe6I"
+        get_video(url_id);
+        
         // hide loader
         $(".boxLoading").hide();
     });
