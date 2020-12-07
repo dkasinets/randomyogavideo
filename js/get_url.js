@@ -1,4 +1,7 @@
 
+function show_wait_text() {
+    $("#wait_text").fadeIn();
+}
 
 function create_query_string(fields) {
     var query_string = "";
@@ -39,11 +42,12 @@ function get_api_data(query_string) {
     $(".boxLoading").html(`<div class="spinner_wrapper">
                                 <div class="spinner-border text-danger" role="status">
                                     <span class="sr-only">Loading...</span>
-                                </div><span class="looking_text"> Looking for a video...</span>
+                                </div><span class="looking_text"> Looking for a video...</span><span style="display:none" class="wait_text" id="wait_text"><br>(patience is a virtue)</span>
                             </div>`);
     
     $(".boxLoading").addClass("loader_wrapper");
     $(".boxLoading").show();
+    setTimeout(show_wait_text, 3000);
     
     fetch(endpoint)
     .then(function(response) {
