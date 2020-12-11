@@ -36,7 +36,7 @@ function get_api_data(query_string) {
     // http://127.0.0.1:8000/api-yt-links/?query=
     var endpoint = `https://exercise-video-returner.herokuapp.com/api-yt-links/?query=${query_string}`;
     
-    console.log(endpoint)
+    // console.log(endpoint)
 
     // add loader
     $(".boxLoading").html(`<div class="spinner_wrapper">
@@ -58,7 +58,7 @@ function get_api_data(query_string) {
         }
     })
     .then(function(myJson) {
-        console.log(myJson);
+        
         var url_id = myJson.urls[0];
         get_video(url_id);
 
@@ -66,7 +66,7 @@ function get_api_data(query_string) {
         $(".boxLoading").hide();
     })
     .catch((error) => {
-        console.log(error)
+        console.error(error)
         // Error placeholder video OutKast - B.O.B
         var url_id = "lVehcuJXe6I"
         get_video(url_id);
@@ -81,7 +81,7 @@ $( ".form" ).submit(function( event ) {
     event.preventDefault();
     
     var fields = $( this ).serializeArray();
-    console.log( fields );
+    
     var query_string = create_query_string(fields);
     console.log( query_string );
     get_api_data(query_string);
