@@ -67,8 +67,8 @@ function get_api_data(query_string) {
     })
     .catch((error) => {
         console.error(error)
-        // Error placeholder video OutKast - B.O.B
-        var url_id = "lVehcuJXe6I"
+        // Error placeholder video 5 MIN STANDING YOGA STRETCH
+        var url_id = "NMBuSMxrSaY"
         get_video(url_id);
         
         // hide loader
