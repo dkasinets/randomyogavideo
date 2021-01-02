@@ -27,7 +27,7 @@ function get_video(url_id) {
                         </div>
                         <div class="centered_text">
                             <h1 class="cover-heading">Check it out!</h1>
-                            <p class="lead cover-subheading">It's 2020. We're all stuck at home anyway.</p>
+                            <p class="lead cover-subheading">The purpose is to build strength in both the mind and body.</p>
                         </div>`);
 }
 
